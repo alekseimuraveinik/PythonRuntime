@@ -1,7 +1,7 @@
 import Foundation
 import PythonKit
 
-public class PythonInteractor<StoredObjectKey: Hashable & CaseIterable> {
+open class PythonInteractor<StoredObjectKey: Hashable & CaseIterable> {
     private let serialQueue = DispatchQueue(label: "pythonInteractorQueue", qos: .background)
     private var storage = [StoredObjectKey: PythonObject]()
     
